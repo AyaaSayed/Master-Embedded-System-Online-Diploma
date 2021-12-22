@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1639170371 source:c:\users\diesel\desktop\master embedded systems diploma\unit 2\assignment\hw 3\compare\main.c
+	<stdio.h>
+	<stdlib.h>
+	"string.h"
+
