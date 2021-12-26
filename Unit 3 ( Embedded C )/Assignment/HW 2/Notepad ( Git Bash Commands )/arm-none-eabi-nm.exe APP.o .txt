@@ -1,3 +1,0 @@
-00000000 T main
-00000000 D string_buffer
-         U UART_SEND_DATA
