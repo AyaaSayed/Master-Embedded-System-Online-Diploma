@@ -1,0 +1,27 @@
+arm-none-eabi-nm.exe main.o
+00000000 T main
+_________________________________________________________________
+
+arm-none-eabi-nm.exe startup.o
+         U _E_BSS
+         U _E_DATA
+         U _E_TEXT
+         U _S_BSS
+         U _S_DATA
+00000000 W Bus_Fault_Handler
+00000000 W Debug_reserved_Handler
+00000000 T Default_Handler
+00000000 R g_ptr_func_vector
+00000000 W Hard_Fault_Handler
+00000000 W IRQ0_Handler
+00000000 W IRQ1_Handler
+00000000 W IRQ2_Handler
+         U main
+00000000 W MM_Fault_Handler
+00000000 W NMI_Handler
+00000000 W PendSV_Handler
+0000000c T Reset_Handler
+00000000 b Stack
+00000000 W SV_call_Handler
+00000000 W Sys_Tick_Handler
+00000000 W Usage_Fault_Handler
