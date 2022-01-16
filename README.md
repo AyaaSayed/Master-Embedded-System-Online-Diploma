@@ -21,7 +21,7 @@
 
 ---
 
-### Third Term ![image](https://progress-bar.dev/0/?title=In_2022&color=ff0000)
+### Third Term ![image](https://progress-bar.dev/0/?title=In_Progress&color=ff00ff)
 
 ---
 
