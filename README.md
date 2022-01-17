@@ -6,7 +6,7 @@
 
 ## Contents
 
-### First Term ![image](https://progress-bar.dev/60/?title=Done)
+### First Term ![image](https://progress-bar.dev/70/?title=Done)
 
 - Unit 1: Diploma Prerequisites ![image](https://progress-bar.dev/100/?title=No_Assignments&color=bababa)
 - [Unit 2: C Programming](02_C_Programming) ![image](https://progress-bar.dev/100/)
