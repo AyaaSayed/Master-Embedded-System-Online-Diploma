@@ -1,3 +1,3 @@
-[![image](https://drive.google.com/file/d/1Hivc0Kx63x6JgQl1aXnwHQ-2qnaa_7mo/view?usp=sharing)](https://drive.google.com/drive/folders/12OvN_hsMGverGt1i_zCy_RBA6FEf1i1R?usp=sharing)
+[![image](https://drive.google.com/file/d/1nEtKNdI503mV2kUYldKK0JpP_tgNfv_e/view?usp=sharing)](https://drive.google.com/drive/folders/12OvN_hsMGverGt1i_zCy_RBA6FEf1i1R?usp=sharing)
 
 ## My Progress Profile: [Click Here](https://drive.google.com/drive/folders/12OvN_hsMGverGt1i_zCy_RBA6FEf1i1R?usp=sharing)
