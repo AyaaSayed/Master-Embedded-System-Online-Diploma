@@ -468,7 +468,7 @@ Status_t Save_to_File()
 		fprintf( List , "%s " , FIFO_Student.tail->L_name );
 		fprintf( List , "%f " , FIFO_Student.tail->GPA );
 
-		for ( uint32_t i=0 ; i<FIFO_Student.count ; i++ )
+		for ( uint32_t i=0 ; i<4 ; i++ )
 		{
 			fprintf( List , "%d " , FIFO_Student.tail->Course_ID[i] );
 		}
