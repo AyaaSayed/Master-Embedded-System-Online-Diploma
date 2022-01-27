@@ -29,8 +29,7 @@ int main() {
 		printf("7 : Delete student                       \n");
 		printf("8 : Update student                       \n");
 		printf("9 : View students                        \n");
-		printf("10: Save the list                        \n");
-		printf("11: Exit                                 \n");
+		printf("10: Save the list and Exit               \n");
 		printf("______________________________________________________\n");
 
 		printf("Enter an option: ");
@@ -67,8 +66,6 @@ int main() {
 			break;
 		case 10:
 			Save_to_File();
-			break;
-		case 11:
 			Flag = 0;
 			break;
 		default:
