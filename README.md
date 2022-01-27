@@ -25,8 +25,8 @@
 
 ---
 
-## Overall progress ![image](https://progress-bar.dev/0/?scale=3&title=Terms&suffix=&width=230&color=aa00ff)
+## Overall progress ![image](https://progress-bar.dev/1/?scale=3&title=Terms&suffix=&width=230&color=aa00ff)
 
 ---
 
-## My Progress Profile: [Click Here](https://www.learn-in-depth.com/online-diploma/sayedaya01@gmail.com.dev/1/)
+## My Progress Profile: [Click Here](https://www.learn-in-depth.com/online-diploma/sayedaya01@gmail.com)
