@@ -52,7 +52,7 @@ void Init_HSI_Clock()
 	Set(RCC_CFGR,10);
 
 	//Set PPRE2 APB2 Prescaler to 2MHZ
-	//divide by 2
+	//divide by 4
 	Set(RCC_CFGR,11);
 	Set(RCC_CFGR,13);
 
