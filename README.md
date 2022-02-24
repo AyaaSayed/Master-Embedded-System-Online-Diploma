@@ -17,7 +17,7 @@
 ---
 
 ### Second Term ![image](https://progress-bar.dev/15/?title=In_Progress&color=ff00ff)
-- [Unit 6: Micro-controller Arch.](06_Term_2/Unit_6_(_Micro-controller_Arch._)) ![image](https://progress-bar.dev/70/)
+- [Unit 6: Micro-controller Arch.](Term 2/Unit 6 ( Micro-controller Arch. )) ![image](https://progress-bar.dev/70/)
 
 ---
 
