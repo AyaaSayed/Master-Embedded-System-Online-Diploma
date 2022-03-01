@@ -6,11 +6,11 @@
 
 ## Lab Objectives
 
-![image](https://drive.google.com/uc?export=view&id=1_YGQ-gzeswWMduxpPEz-YbqObp3yRlcx)](https://drive.google.com/uc?export=view&id=1qsWNiCT4y2sVADLxippjPc-eZY7YU8Fe)
+![image](https://drive.google.com/uc?export=view&id=1qsWNiCT4y2sVADLxippjPc-eZY7YU8Fe)
 
 > We are going to use Atmega32A
 
-![image](https://drive.google.com/uc?export=view&id=1_YGQ-gzeswWMduxpPEz-YbqObp3yRlcx)](https://drive.google.com/uc?export=view&id=1jM_IZ1qaffwMQK12rpeLQ3_WyQQ8Vn79)
+![image](https://drive.google.com/uc?export=view&id=1jM_IZ1qaffwMQK12rpeLQ3_WyQQ8Vn79)
 
 ---
 
