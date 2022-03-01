@@ -18,7 +18,7 @@
 
 > Schematic capture
 
-[![Proteus](https://drive.google.com/uc?export=view&id=1vUZHeUuAYCA4xGiWoDrQ_J6jXtIF44Vb)](https://drive.google.com/drive/folders/1bMTQ4eIcxL6zAKGowGj3Zcuzx2Qvd1C2)
+[![Proteus](https://user-images.githubusercontent.com/95402835/156156151-fd79a234-6919-468c-b064-3e00fc0d27f5.png)](https://drive.google.com/drive/folders/1bMTQ4eIcxL6zAKGowGj3Zcuzx2Qvd1C2)
 
 > Changing INT0 logic from low to high generates an interrupt as the button press corresponds to a logic change trigger.
 
