@@ -68,17 +68,17 @@ typedef struct{
 
 
 /*************************** @ref GPIO_SPEED_define ***************************/
-#define GPIO_SPEED_Input                0b00  //Input State
-#define GPIO_SPEED_ANALOG               0b01  //Output mode, max speed 10 MHZ
-#define GPIO_SPEED_Input_FLO            0b10  //Output mode, max speed 2  MHZ
-#define GPIO_SPEED_Input_PU             0b11  //Output mode, max speed 50 MHZ
+#define GPIO_SPEED_Input               0b00  //Input State
+#define GPIO_SPEED_ANALOG              0b01  //Output mode, max speed 10 MHZ
+#define GPIO_SPEED_Input_FLO           0b10  //Output mode, max speed 2  MHZ
+#define GPIO_SPEED_Input_PU            0b11  //Output mode, max speed 50 MHZ
 
 
 /*********************************@ref GPIO_PIN********************************/
-#define HIGH                         1UL
-#define LOW                          0UL
-#define OUTPUT                       1UL
-#define INPUT                        0UL
+#define HIGH                           1UL
+#define LOW                            0UL
+#define OUTPUT                         1UL
+#define INPUT                          0UL
 
 
 /*******************************************************************************
