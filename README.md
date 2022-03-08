@@ -16,9 +16,9 @@
 
 ---
 
-### Second Term ![image](https://progress-bar.dev/20/?title=In_Progress&color=ff00ff)
+### Second Term ![image](https://progress-bar.dev/35/?title=In_Progress&color=ff00ff)
 - Unit 6: Micro-controller Arch. ![image](https://progress-bar.dev/100/)
-- Unit 7: MCU Essential Peripherals. ![image](https://progress-bar.dev/20/)
+- Unit 7: MCU Essential Peripherals. ![image](https://progress-bar.dev/70/)
 
 ---
 
