@@ -32,7 +32,7 @@
 *                    package has only GPIO A,B and part of C AND D exported as
 *                    external PINs from the MCU.
 */
-void MCAL_GPIO_Init(GPIO_t* GPIOx , GPIO_PinConfig_t* PinConfig)
+void MCAL_GPIO_Init (GPIO_t* GPIOx , GPIO_PinConfig_t* PinConfig)
 {
 	// Port configuration register low  (GPIOx_CRL) (x=A..G) configure pin 0..7
 	// Port configuration register high (GPIOx_CRH) (x=A..G) configure pin 8..15
@@ -145,7 +145,7 @@ void MCAL_GPIO_Init(GPIO_t* GPIOx , GPIO_PinConfig_t* PinConfig)
 *
 * Note              -None.
 */
-void MCAL_GPIO_DeInit(GPIO_t* GPIOx)
+void MCAL_GPIO_DeInit (GPIO_t* GPIOx)
 {
 	// APB2 peripheral reset register (RCC_APB2RSTR)
 	// Set and cleared by software.
@@ -191,7 +191,7 @@ void MCAL_GPIO_DeInit(GPIO_t* GPIOx)
 *
 * Note              -None.
 */
-uint8_t  MCAL_GPIO_ReadPin  (GPIO_t* GPIOx , uint8_t PinNumber)
+uint8_t  MCAL_GPIO_ReadPin (GPIO_t* GPIOx , uint8_t PinNumber)
 {
 	return ((((GPIOx->IDR->IDR) & PinNumber) == TRUE)? TRUE : FALSE);
 }
@@ -262,7 +262,7 @@ void MCAL_GPIO_WritePin (GPIO_t* GPIOx , uint16_t PinNumber , uint8_t Value)
 *
 * Note              -None.
 */
-void MCAL_GPIO_WritePort    (GPIO_t* GPIOx , uint16_t Value)
+void MCAL_GPIO_WritePort (GPIO_t* GPIOx , uint16_t Value)
 {
 	GPIOx->ODR->ODR = Value;
 }
@@ -282,7 +282,7 @@ void MCAL_GPIO_WritePort    (GPIO_t* GPIOx , uint16_t Value)
 *
 * Note              -None.
 */
-void MCAL_GPIO_TogglePin    (GPIO_t* GPIOx , uint16_t PinNumber)
+void MCAL_GPIO_TogglePin (GPIO_t* GPIOx , uint16_t PinNumber)
 {
 	GPIOx->ODR->ODR ^= PinNumber;
 }
@@ -307,7 +307,7 @@ void MCAL_GPIO_TogglePin    (GPIO_t* GPIOx , uint16_t PinNumber)
 *                    LCK[15:0] must not change. Any error in the lock
 *                    sequence will abort the lock.
 */
-Return_t MCAL_GPIO_LockPin      (GPIO_t* GPIOx , uint16_t PinNumber)
+Return_t MCAL_GPIO_LockPin (GPIO_t* GPIOx , uint16_t PinNumber)
 {
 	volatile uint8_t LockValue;
 
