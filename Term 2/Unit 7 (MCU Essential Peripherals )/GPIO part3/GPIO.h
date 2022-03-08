@@ -84,19 +84,19 @@ typedef struct{
 /*******************************************************************************
                       APIs Supported by "MCAL GPIO DRIVER"
 *******************************************************************************/
-void MCAL_GPIO_Init         (GPIO_t* GPIOx , GPIO_PinConfig_t* PinConfig);
-void MCAL_GPIO_DeInit       (GPIO_t* GPIOx);
+void MCAL_GPIO_Init          (GPIO_t* GPIOx , GPIO_PinConfig_t* PinConfig);
+void MCAL_GPIO_DeInit        (GPIO_t* GPIOx);
 
 // Read APIs
 uint8_t   MCAL_GPIO_ReadPin  (GPIO_t* GPIOx , uint8_t PinNumber);
 uint16_t  MCAL_GPIO_ReadPort (GPIO_t* GPIOx);
 
 // Write APIs
-void MCAL_GPIO_WritePin   (GPIO_t* GPIOx , uint16_t PinNumber , uint8_t Value);
-void MCAL_GPIO_WritePort  (GPIO_t* GPIOx , uint16_t Value);
+void MCAL_GPIO_WritePin      (GPIO_t* GPIOx , uint16_t PinNumber , uint8_t Value);
+void MCAL_GPIO_WritePort     (GPIO_t* GPIOx , uint16_t Value);
 
-void MCAL_GPIO_TogglePin    (GPIO_t* GPIOx , uint16_t PinNumber);
+void MCAL_GPIO_TogglePin     (GPIO_t* GPIOx , uint16_t PinNumber);
 
-Return_t MCAL_GPIO_LockPin      (GPIO_t* GPIOx , uint16_t PinNumber);
+Return_t MCAL_GPIO_LockPin   (GPIO_t* GPIOx , uint16_t PinNumber);
 
 #endif /* GPIO_H_ */
