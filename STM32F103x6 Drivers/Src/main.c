@@ -24,7 +24,7 @@
                                      Includes
 *******************************************************************************/
 
-#include "lcd.h"
+#include "LCD.h"
 #include "Keypad.h"
 #include  "Segment.h"
 
@@ -55,31 +55,31 @@ int main(void)
 	Clock_INIT(GPIOB);
 
 	//Initialization LCD, Keypad and 7 Segment
-	//HAL_LCD_INIT();
-	LCD_INIT();
+	HAL_LCD_INIT();
+	//LCD_INIT();
 	HAL_Keypad_INIT();
 	HAL_7_Segment_INIT();
 
 	_delay_ms(1000);
 	//LCD display startup message
-	//HAL_LCD_display_String("Hey");
-	LCD_WRITE_STRING("Hey");
+	HAL_LCD_display_String("Hey");
+	//LCD_WRITE_STRING("Hey");
 	_delay_ms(1000);
-	//HAL_LCD_Clear_Screen();
-	LCD_clear_screen();
+	HAL_LCD_Clear_Screen();
+	//LCD_clear_screen();
 
 	//Displaying count from 0 to 9 untill keypad is ready
 	for (unsigned char i=0 ; i<11 ; i++)
 	{
-		//HAL_LCD_Display_Character(LCD[i]);
-		LCD_WRITE_CHAR(LCD[i]);
-		MCAL_GPIO_WritePort(SEGMENT_PORT , Segment[i] << 9);
+		HAL_LCD_Display_Character(LCD[i]);
+		//LCD_WRITE_CHAR(LCD[i]);
+		MCAL_GPIO_WritePort(SEGMENT_PORT , Segment[i] << 3);
 		_delay_ms(100);
 	}
-	//HAL_LCD_Clear_Screen();
-	//HAL_LCD_display_String("Keypad is ready");
-	LCD_clear_screen();
-	LCD_WRITE_STRING("Keypad is ready");
+	HAL_LCD_Clear_Screen();
+	HAL_LCD_display_String("Keypad is ready");
+	//LCD_clear_screen();
+	//LCD_WRITE_STRING("Keypad is ready");
 	_delay_ms(500);
 
 	while (1)
@@ -93,13 +93,13 @@ int main(void)
 			//check if key is number or character
 			if (key == 'C')
 			{
-				//HAL_LCD_Clear_Screen();
-				LCD_clear_screen();
+				HAL_LCD_Clear_Screen();
+				//LCD_clear_screen();
 				continue;
 			}
 			else
-				LCD_WRITE_CHAR(key);
-				//HAL_LCD_Display_Character(key);
+				//LCD_WRITE_CHAR(key);
+				HAL_LCD_Display_Character(key);
 
 		}
 	}
