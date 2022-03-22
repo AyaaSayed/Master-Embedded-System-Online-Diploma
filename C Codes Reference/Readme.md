@@ -1,5 +1,5 @@
-### C Programming
-## Codes Reference
+###      C Programming
+##       Codes Reference
 
 [1)c function to take an integer number and calculate it's square root](main_1.c)
 
@@ -22,20 +22,20 @@
 [11)c function to sum numbers from 1 to 100(without loop)](main_11.c)
 
 [14)c function to calculate the factorial of num](main_14.c)
-#     a)Iteration
-#     b)Recursive
+      a)Iteration
+      b)Recursive
 
 [15)c function to find a number in a sorted array](main_15.c)
 
 [16)c function to return the maximum and minmum number in an array and there index](main_16.c)
-#     a)Using pointers
-#     b)Using structure
+      a)Using pointers
+      b)Using structure
 
 [17)c function to take 2 unsigned char and add them and returen the result in unsigned char](main_17.c)
 
 [18)c function to take an array and revers its elements](main_18.c)
-a)Using iteration
-b)Using stack
+      a)Using iteration
+      b)Using stack
 
 [19)c function to take 2 arrays and swap them(2 different size)](main_19.c)
 
@@ -51,7 +51,7 @@ b)Using stack
 [24)c function to search a word in string](main_24.c)
 
 [25)c function to take an array and return the biggest difference between 2 numbers in the array](main_25.c)
-#     (the smaller number must come first in the array) {10,1,5,3,6,8,7,2}->return 9 difference between 1,10
+      (the smaller number must come first in the array) {10,1,5,3,6,8,7,2}->return 9 difference between 1,10
 
 [26) c function to count the max number of zeros between two ones](main_26.c)
 
@@ -69,14 +69,14 @@ b)Using stack
 [32) c function to delete repeated element in an array](main_32.c)
 
 [33)c function to reverse string(mohamed->demahom)](main_33.c)
-#    a)Using iterartion
-#    b)Using stack data structure
+      a)Using iterartion
+      b)Using stack data structure
 
 [34)c function to sort array using funtion pointer](main_34.c)
 
-[35) c function to check number even or odd](main_35.c)
-#    a)Using bitwise operator
-#    b)Using modules operator
+[35)c function to check number even or odd](main_35.c)
+      a)Using bitwise operator
+      b)Using modules operator
 
 [36)Given two integers:L and R,find the maximal value of A,B where A and B satisfy the condition L<=A<=B<=R](main_36.c)
 
@@ -101,7 +101,7 @@ b)Using stack
 [47)c function to get the lowest order set bit of a number?(22->00010110)->highest order set is 1](main_47.c)
 
 [48)c function to count trailing zeros in binary number?(trailing zeros mean number of zeros elle wara b3d le 7ad mala2y 1)](main_48.c)
-#    example:16->00010000->trailing zeros=4      15->00001111->trailing zeros=0.
+      example:16->00010000->trailing zeros=4      15->00001111->trailing zeros=0.
 
 [49)c function to count number of ones and zeros in binary number](main_49.c)
 
@@ -166,15 +166,15 @@ b)Using stack
 [79)using pointer to function with/without typedef?(sorting algorithm)](main_79.c)
 
 [80)how to accsess two dimentional array with pointer(three different ways)](main_80.c)
-#    a)Using pointer to two dimentional array.
-#    b)Using pointer to array of 2 integers.
-#    c)Using pointer to the whole array.
+    a)Using pointer to two dimentional array.
+    b)Using pointer to array of 2 integers.
+    c)Using pointer to the whole array.
 
 [81)how to allocate block of memory for 2D array](main_81.c)
-#    a)Using a single pointer
-#    b)Using an array of pointers
-#    c)Using pointer to a pointer
-#    d)Using double pointer and one malloc call
+    a)Using a single pointer
+    b)Using an array of pointers
+    c)Using pointer to a pointer
+    d)Using double pointer and one malloc call
 
 [82)c function to count number of words in string](main_82.c)
 
@@ -211,17 +211,17 @@ b)Using stack
 [97)c code to print "even" or "odd" without using conditional statement](main_97.c)
 
 [98)c code to draw the pattern](main_98.c)
-#          1
-#        2 3 2
-#      3 4 5 4 3
-#    4 5 6 7 6 5 4
+          1
+        2 3 2
+      3 4 5 4 3
+    4 5 6 7 6 5 4
 
 [100) draw the pattern](main_100.c)
-#     1
-#     01
-#     101
-#     0101
-#     10101
+     1
+     01
+     101
+     0101
+     10101
 
 [101)how to fine size of two dimentional array without sizeof operator](main_101.c)
 
