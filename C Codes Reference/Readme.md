@@ -1,5 +1,5 @@
 #       C Programming
-###      Codes Reference
+##      Codes Reference
 
 [1)c function to take an integer number and calculate it's square root](main_1.c)
 
