@@ -1,7 +1,0 @@
-lcd.c:10:6:delay_ms	24	static
-lcd.c:17:6:LCD_clear_screen	8	static
-lcd.c:21:6:LCD_GOTO_XY	16	static
-lcd.c:34:6:LCD_INIT	8	static
-lcd.c:109:6:LCD_WRITE_COMMAND	16	static
-lcd.c:121:6:LCD_WRITE_CHAR	16	static
-lcd.c:133:6:LCD_WRITE_STRING	24	static

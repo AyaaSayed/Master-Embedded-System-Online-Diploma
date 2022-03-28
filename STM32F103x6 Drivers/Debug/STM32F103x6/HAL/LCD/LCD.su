@@ -1,8 +1,0 @@
-LCD.c:17:6:_delay_ms	24	static
-LCD.c:25:6:HAL_LCD_Clear_Screen	8	static
-LCD.c:30:6:HAL_LCD_INIT	16	static
-LCD.c:132:6:HAL_LCD_Send_Command	16	static
-LCD.c:164:6:HAL_LCD_Display_Character	16	static
-LCD.c:196:6:HAL_LCD_display_String	24	static
-LCD.c:219:6:HAL_LCD_Intger_Number	24	static
-LCD.c:227:6:LCD_Real_Number	72	static
