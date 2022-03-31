@@ -1,2 +1,0 @@
-SPI_Debug_Analysis.c:25:6:USART1_CallBack	8	static
-SPI_Debug_Analysis.c:39:6:SPI_Debug_Analysis_Using_UART1_Interrupt	48	static

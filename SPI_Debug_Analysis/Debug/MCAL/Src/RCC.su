@@ -1,6 +1,0 @@
-RCC.c:16:6:MCAL_RCC_GPIO_EN	16	static
-RCC.c:29:6:MCAL_RCC_AFIO_EN	4	static
-RCC.c:34:10:MCAL_RCC_GetSYS_CLKFreq	4	static
-RCC.c:47:10:MCAL_RCC_GetHCLKFreq	8	static
-RCC.c:53:10:MCAL_RCC_GetPCLK1Freq	8	static
-RCC.c:59:10:MCAL_RCC_GetPCLK2Freq	8	static
