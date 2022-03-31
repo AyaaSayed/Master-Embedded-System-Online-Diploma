@@ -1,0 +1,3 @@
+Keypad.c:21:9:INPUT_IS_STILL_VALID	8	static
+Keypad.c:32:6:HAL_Keypad_INIT	16	static
+Keypad.c:81:15:HAL_Keypad_Get_Character	16	static
