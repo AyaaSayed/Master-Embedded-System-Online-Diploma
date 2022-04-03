@@ -1,0 +1,3 @@
+SPI_Transmitter_between_2MCU.c:25:6:USART1_CallBack	4	static
+SPI_Transmitter_between_2MCU.c:38:6:SPI1_CallBack	8	static
+SPI_Transmitter_between_2MCU.c:53:6:SPI_Transmitter_between_2MCU	48	static
