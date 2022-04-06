@@ -1,0 +1,521 @@
+
+ATmega32 Drivers.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000030c  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00800060  00000380  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          0000000d  00800060  00800060  00000380  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000380  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000003b0  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000158  00000000  00000000  000003ec  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000010a1  00000000  00000000  00000544  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 0000098e  00000000  00000000  000015e5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000a1b  00000000  00000000  00001f73  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000330  00000000  00000000  00002990  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000736  00000000  00000000  00002cc0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000ccc  00000000  00000000  000033f6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000108  00000000  00000000  000040c2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+   8:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+   c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  10:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  14:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  18:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  1c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  20:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  24:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  28:	0c 94 5d 01 	jmp	0x2ba	; 0x2ba <__vector_10>
+  2c:	0c 94 36 01 	jmp	0x26c	; 0x26c <__vector_11>
+  30:	0c 94 de 00 	jmp	0x1bc	; 0x1bc <__vector_12>
+  34:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  38:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  3c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  40:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  44:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  48:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  4c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  50:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d8 e0       	ldi	r29, 0x08	; 8
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+
+00000060 <__do_copy_data>:
+  60:	10 e0       	ldi	r17, 0x00	; 0
+  62:	a0 e6       	ldi	r26, 0x60	; 96
+  64:	b0 e0       	ldi	r27, 0x00	; 0
+  66:	ec e0       	ldi	r30, 0x0C	; 12
+  68:	f3 e0       	ldi	r31, 0x03	; 3
+  6a:	02 c0       	rjmp	.+4      	; 0x70 <__do_copy_data+0x10>
+  6c:	05 90       	lpm	r0, Z+
+  6e:	0d 92       	st	X+, r0
+  70:	a0 36       	cpi	r26, 0x60	; 96
+  72:	b1 07       	cpc	r27, r17
+  74:	d9 f7       	brne	.-10     	; 0x6c <__do_copy_data+0xc>
+
+00000076 <__do_clear_bss>:
+  76:	20 e0       	ldi	r18, 0x00	; 0
+  78:	a0 e6       	ldi	r26, 0x60	; 96
+  7a:	b0 e0       	ldi	r27, 0x00	; 0
+  7c:	01 c0       	rjmp	.+2      	; 0x80 <.do_clear_bss_start>
+
+0000007e <.do_clear_bss_loop>:
+  7e:	1d 92       	st	X+, r1
+
+00000080 <.do_clear_bss_start>:
+  80:	ad 36       	cpi	r26, 0x6D	; 109
+  82:	b2 07       	cpc	r27, r18
+  84:	e1 f7       	brne	.-8      	; 0x7e <.do_clear_bss_loop>
+  86:	0e 94 88 00 	call	0x110	; 0x110 <main>
+  8a:	0c 94 84 01 	jmp	0x308	; 0x308 <_exit>
+
+0000008e <__bad_interrupt>:
+  8e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000092 <Timer_OverFlow_Interrupt_Handler>:
+	while (1);
+}
+
+void Timer_OverFlow_Interrupt_Handler(void)
+{
+	Timer_Counter++;
+  92:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+  96:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+  9a:	a0 91 62 00 	lds	r26, 0x0062	; 0x800062 <__DATA_REGION_ORIGIN__+0x2>
+  9e:	b0 91 63 00 	lds	r27, 0x0063	; 0x800063 <__DATA_REGION_ORIGIN__+0x3>
+  a2:	01 96       	adiw	r24, 0x01	; 1
+  a4:	a1 1d       	adc	r26, r1
+  a6:	b1 1d       	adc	r27, r1
+  a8:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+  ac:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+  b0:	a0 93 62 00 	sts	0x0062, r26	; 0x800062 <__DATA_REGION_ORIGIN__+0x2>
+  b4:	b0 93 63 00 	sts	0x0063, r27	; 0x800063 <__DATA_REGION_ORIGIN__+0x3>
+	if(Timer_Counter == 3921) /* 3921 ---> 1 sec*/
+  b8:	81 35       	cpi	r24, 0x51	; 81
+  ba:	9f 40       	sbci	r25, 0x0F	; 15
+  bc:	a1 05       	cpc	r26, r1
+  be:	b1 05       	cpc	r27, r1
+  c0:	61 f4       	brne	.+24     	; 0xda <Timer_OverFlow_Interrupt_Handler+0x48>
+	{
+		/* Toggle Led every one second */
+		TOGGLE_BIT(PORTB, 0);
+  c2:	98 b3       	in	r25, 0x18	; 24
+  c4:	81 e0       	ldi	r24, 0x01	; 1
+  c6:	89 27       	eor	r24, r25
+  c8:	88 bb       	out	0x18, r24	; 24
+		
+		/* Clear Counter */
+		Timer_Counter = 0;
+  ca:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__DATA_REGION_ORIGIN__>
+  ce:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+  d2:	10 92 62 00 	sts	0x0062, r1	; 0x800062 <__DATA_REGION_ORIGIN__+0x2>
+  d6:	10 92 63 00 	sts	0x0063, r1	; 0x800063 <__DATA_REGION_ORIGIN__+0x3>
+  da:	08 95       	ret
+
+000000dc <Timer_test>:
+
+/*******************************************************************************
+                                  Application APIs                                 
+ *******************************************************************************/
+void Timer_test(void)
+{
+  dc:	cf 93       	push	r28
+  de:	df 93       	push	r29
+  e0:	00 d0       	rcall	.+0      	; 0xe2 <Timer_test+0x6>
+  e2:	00 d0       	rcall	.+0      	; 0xe4 <Timer_test+0x8>
+  e4:	1f 92       	push	r1
+  e6:	cd b7       	in	r28, 0x3d	; 61
+  e8:	de b7       	in	r29, 0x3e	; 62
+	/* Configure PIND0 as Output */
+	SET_BIT(DDRB, 0);
+  ea:	b8 9a       	sbi	0x17, 0	; 23
+	
+	/* Set compare value */
+	MCAL_TIMER0_SetCompareValue(100);
+  ec:	84 e6       	ldi	r24, 0x64	; 100
+  ee:	0e 94 34 01 	call	0x268	; 0x268 <MCAL_TIMER0_SetCompareValue>
+	
+	/* Set timer configuration */
+	TIMER0Config_t TIMER0_Config;
+	
+	TIMER0_Config.Timer_Mode = TIMER0_MODE_CTC;
+  f2:	88 e0       	ldi	r24, 0x08	; 8
+  f4:	89 83       	std	Y+1, r24	; 0x01
+	TIMER0_Config.Clock_Source = TIMER0_CLOCK_SOURCE_INTERNAL_PRESCALER_8;
+  f6:	82 e0       	ldi	r24, 0x02	; 2
+  f8:	8a 83       	std	Y+2, r24	; 0x02
+	TIMER0_Config.IRQ_Enable = TIMER0_IRQ_ENABLE_TOIE0;
+  fa:	81 e0       	ldi	r24, 0x01	; 1
+  fc:	8b 83       	std	Y+3, r24	; 0x03
+	TIMER0_Config.P_IRQ_CallBack = Timer_OverFlow_Interrupt_Handler;
+  fe:	89 e4       	ldi	r24, 0x49	; 73
+ 100:	90 e0       	ldi	r25, 0x00	; 0
+ 102:	9d 83       	std	Y+5, r25	; 0x05
+ 104:	8c 83       	std	Y+4, r24	; 0x04
+	
+	MCAL_TIMER0_Init(&TIMER0_Config);
+ 106:	ce 01       	movw	r24, r28
+ 108:	01 96       	adiw	r24, 0x01	; 1
+ 10a:	0e 94 08 01 	call	0x210	; 0x210 <MCAL_TIMER0_Init>
+ 10e:	ff cf       	rjmp	.-2      	; 0x10e <Timer_test+0x32>
+
+00000110 <main>:
+
+#include "Timer_test.h"
+
+int main(void)
+{
+	Timer_test();
+ 110:	0e 94 6e 00 	call	0xdc	; 0xdc <Timer_test>
+}
+ 114:	80 e0       	ldi	r24, 0x00	; 0
+ 116:	90 e0       	ldi	r25, 0x00	; 0
+ 118:	08 95       	ret
+
+0000011a <vINTIAL_PIN_OUTPUT>:
+	
+}
+
+void vINTIAL_PIN_OUTPUT(PORT_NAME_t Name,uint8 PIN_NUM,PIN_INTIAL_OUTPUT_STATE_t Intial_Val)
+{
+	switch (Intial_Val)
+ 11a:	44 23       	and	r20, r20
+ 11c:	19 f0       	breq	.+6      	; 0x124 <vINTIAL_PIN_OUTPUT+0xa>
+ 11e:	41 30       	cpi	r20, 0x01	; 1
+ 120:	49 f1       	breq	.+82     	; 0x174 <vINTIAL_PIN_OUTPUT+0x5a>
+ 122:	08 95       	ret
+	{
+	case OUT_OFF : switch (Name)
+ 124:	81 30       	cpi	r24, 0x01	; 1
+ 126:	71 f0       	breq	.+28     	; 0x144 <vINTIAL_PIN_OUTPUT+0x2a>
+ 128:	28 f0       	brcs	.+10     	; 0x134 <vINTIAL_PIN_OUTPUT+0x1a>
+ 12a:	82 30       	cpi	r24, 0x02	; 2
+ 12c:	99 f0       	breq	.+38     	; 0x154 <vINTIAL_PIN_OUTPUT+0x3a>
+ 12e:	83 30       	cpi	r24, 0x03	; 3
+ 130:	c9 f0       	breq	.+50     	; 0x164 <vINTIAL_PIN_OUTPUT+0x4a>
+ 132:	08 95       	ret
+	       {
+			   case 0: DDRA  |= (PIN_NUM);
+ 134:	8a b3       	in	r24, 0x1a	; 26
+ 136:	86 2b       	or	r24, r22
+ 138:	8a bb       	out	0x1a, r24	; 26
+			           PORTA &=~(PIN_NUM);
+ 13a:	8b b3       	in	r24, 0x1b	; 27
+ 13c:	60 95       	com	r22
+ 13e:	68 23       	and	r22, r24
+ 140:	6b bb       	out	0x1b, r22	; 27
+			   break;
+ 142:	08 95       	ret
+			   
+			   case 1: DDRB  |= (PIN_NUM);
+ 144:	87 b3       	in	r24, 0x17	; 23
+ 146:	86 2b       	or	r24, r22
+ 148:	87 bb       	out	0x17, r24	; 23
+			           PORTB &=~(PIN_NUM);
+ 14a:	88 b3       	in	r24, 0x18	; 24
+ 14c:	60 95       	com	r22
+ 14e:	68 23       	and	r22, r24
+ 150:	68 bb       	out	0x18, r22	; 24
+			   break; 
+ 152:	08 95       	ret
+			   
+			   case 2: DDRC  |= (PIN_NUM);
+ 154:	84 b3       	in	r24, 0x14	; 20
+ 156:	86 2b       	or	r24, r22
+ 158:	84 bb       	out	0x14, r24	; 20
+			           PORTC &=~(PIN_NUM);
+ 15a:	85 b3       	in	r24, 0x15	; 21
+ 15c:	60 95       	com	r22
+ 15e:	68 23       	and	r22, r24
+ 160:	65 bb       	out	0x15, r22	; 21
+			   break;
+ 162:	08 95       	ret
+			   
+			   case 3: DDRD  |= (PIN_NUM);
+ 164:	81 b3       	in	r24, 0x11	; 17
+ 166:	86 2b       	or	r24, r22
+ 168:	81 bb       	out	0x11, r24	; 17
+			           PORTD &=~(PIN_NUM);
+ 16a:	82 b3       	in	r24, 0x12	; 18
+ 16c:	60 95       	com	r22
+ 16e:	68 23       	and	r22, r24
+ 170:	62 bb       	out	0x12, r22	; 18
+			   break;
+ 172:	08 95       	ret
+	       }
+		break;
+		
+		case OUT_ON : switch (Name)
+ 174:	81 30       	cpi	r24, 0x01	; 1
+ 176:	69 f0       	breq	.+26     	; 0x192 <vINTIAL_PIN_OUTPUT+0x78>
+ 178:	28 f0       	brcs	.+10     	; 0x184 <vINTIAL_PIN_OUTPUT+0x6a>
+ 17a:	82 30       	cpi	r24, 0x02	; 2
+ 17c:	89 f0       	breq	.+34     	; 0x1a0 <vINTIAL_PIN_OUTPUT+0x86>
+ 17e:	83 30       	cpi	r24, 0x03	; 3
+ 180:	b1 f0       	breq	.+44     	; 0x1ae <vINTIAL_PIN_OUTPUT+0x94>
+ 182:	08 95       	ret
+		{
+			case 0: DDRA  |= (PIN_NUM);
+ 184:	8a b3       	in	r24, 0x1a	; 26
+ 186:	86 2b       	or	r24, r22
+ 188:	8a bb       	out	0x1a, r24	; 26
+			        PORTA |= (PIN_NUM);
+ 18a:	8b b3       	in	r24, 0x1b	; 27
+ 18c:	68 2b       	or	r22, r24
+ 18e:	6b bb       	out	0x1b, r22	; 27
+			break;
+ 190:	08 95       	ret
+			
+			case 1: DDRB  |= (PIN_NUM);
+ 192:	87 b3       	in	r24, 0x17	; 23
+ 194:	86 2b       	or	r24, r22
+ 196:	87 bb       	out	0x17, r24	; 23
+			        PORTB |= (PIN_NUM);
+ 198:	88 b3       	in	r24, 0x18	; 24
+ 19a:	68 2b       	or	r22, r24
+ 19c:	68 bb       	out	0x18, r22	; 24
+			break;
+ 19e:	08 95       	ret
+			
+			case 2: DDRC  |= (PIN_NUM);
+ 1a0:	84 b3       	in	r24, 0x14	; 20
+ 1a2:	86 2b       	or	r24, r22
+ 1a4:	84 bb       	out	0x14, r24	; 20
+			        PORTC |= (PIN_NUM);
+ 1a6:	85 b3       	in	r24, 0x15	; 21
+ 1a8:	68 2b       	or	r22, r24
+ 1aa:	65 bb       	out	0x15, r22	; 21
+			break;
+ 1ac:	08 95       	ret
+			
+			case 3: DDRD  |= (PIN_NUM);
+ 1ae:	81 b3       	in	r24, 0x11	; 17
+ 1b0:	86 2b       	or	r24, r22
+ 1b2:	81 bb       	out	0x11, r24	; 17
+			        PORTD |= (PIN_NUM);
+ 1b4:	82 b3       	in	r24, 0x12	; 18
+ 1b6:	68 2b       	or	r22, r24
+ 1b8:	62 bb       	out	0x12, r22	; 18
+ 1ba:	08 95       	ret
+
+000001bc <__vector_12>:
+ 
+/*******************************************************************************
+                                  IRQ Handlers
+*******************************************************************************/
+ISR(SPI_STC_vect)
+{
+ 1bc:	1f 92       	push	r1
+ 1be:	0f 92       	push	r0
+ 1c0:	0f b6       	in	r0, 0x3f	; 63
+ 1c2:	0f 92       	push	r0
+ 1c4:	11 24       	eor	r1, r1
+ 1c6:	2f 93       	push	r18
+ 1c8:	3f 93       	push	r19
+ 1ca:	4f 93       	push	r20
+ 1cc:	5f 93       	push	r21
+ 1ce:	6f 93       	push	r22
+ 1d0:	7f 93       	push	r23
+ 1d2:	8f 93       	push	r24
+ 1d4:	9f 93       	push	r25
+ 1d6:	af 93       	push	r26
+ 1d8:	bf 93       	push	r27
+ 1da:	ef 93       	push	r30
+ 1dc:	ff 93       	push	r31
+	G_SPI_Config->P_IRQ_CallBack();
+ 1de:	e0 91 64 00 	lds	r30, 0x0064	; 0x800064 <G_SPI_Config>
+ 1e2:	f0 91 65 00 	lds	r31, 0x0065	; 0x800065 <G_SPI_Config+0x1>
+ 1e6:	07 80       	ldd	r0, Z+7	; 0x07
+ 1e8:	f0 85       	ldd	r31, Z+8	; 0x08
+ 1ea:	e0 2d       	mov	r30, r0
+ 1ec:	09 95       	icall
+}
+ 1ee:	ff 91       	pop	r31
+ 1f0:	ef 91       	pop	r30
+ 1f2:	bf 91       	pop	r27
+ 1f4:	af 91       	pop	r26
+ 1f6:	9f 91       	pop	r25
+ 1f8:	8f 91       	pop	r24
+ 1fa:	7f 91       	pop	r23
+ 1fc:	6f 91       	pop	r22
+ 1fe:	5f 91       	pop	r21
+ 200:	4f 91       	pop	r20
+ 202:	3f 91       	pop	r19
+ 204:	2f 91       	pop	r18
+ 206:	0f 90       	pop	r0
+ 208:	0f be       	out	0x3f, r0	; 63
+ 20a:	0f 90       	pop	r0
+ 20c:	1f 90       	pop	r1
+ 20e:	18 95       	reti
+
+00000210 <MCAL_TIMER0_Init>:
+	{
+		OCR0 = Duty_Cycle;
+	}
+	else if(Global_TIMER0_Config.Timer_Mode == TIMER0_MODE_Fast_PWM_Inverting)
+	{
+		OCR0 = (uint8)(255 - Duty_Cycle);
+ 210:	cf 93       	push	r28
+ 212:	df 93       	push	r29
+ 214:	ec 01       	movw	r28, r24
+ 216:	85 e0       	ldi	r24, 0x05	; 5
+ 218:	fe 01       	movw	r30, r28
+ 21a:	a8 e6       	ldi	r26, 0x68	; 104
+ 21c:	b0 e0       	ldi	r27, 0x00	; 0
+ 21e:	01 90       	ld	r0, Z+
+ 220:	0d 92       	st	X+, r0
+ 222:	8a 95       	dec	r24
+ 224:	e1 f7       	brne	.-8      	; 0x21e <MCAL_TIMER0_Init+0xe>
+ 226:	93 b7       	in	r25, 0x33	; 51
+ 228:	88 81       	ld	r24, Y
+ 22a:	89 2b       	or	r24, r25
+ 22c:	83 bf       	out	0x33, r24	; 51
+ 22e:	88 81       	ld	r24, Y
+ 230:	87 7f       	andi	r24, 0xF7	; 247
+ 232:	29 f0       	breq	.+10     	; 0x23e <MCAL_TIMER0_Init+0x2e>
+ 234:	40 e0       	ldi	r20, 0x00	; 0
+ 236:	68 e0       	ldi	r22, 0x08	; 8
+ 238:	81 e0       	ldi	r24, 0x01	; 1
+ 23a:	0e 94 8d 00 	call	0x11a	; 0x11a <vINTIAL_PIN_OUTPUT>
+ 23e:	93 b7       	in	r25, 0x33	; 51
+ 240:	89 81       	ldd	r24, Y+1	; 0x01
+ 242:	89 2b       	or	r24, r25
+ 244:	83 bf       	out	0x33, r24	; 51
+ 246:	99 b7       	in	r25, 0x39	; 57
+ 248:	8a 81       	ldd	r24, Y+2	; 0x02
+ 24a:	89 2b       	or	r24, r25
+ 24c:	89 bf       	out	0x39, r24	; 57
+ 24e:	8a 81       	ldd	r24, Y+2	; 0x02
+ 250:	88 23       	and	r24, r24
+ 252:	09 f0       	breq	.+2      	; 0x256 <MCAL_TIMER0_Init+0x46>
+ 254:	78 94       	sei
+ 256:	8b 81       	ldd	r24, Y+3	; 0x03
+ 258:	9c 81       	ldd	r25, Y+4	; 0x04
+ 25a:	90 93 67 00 	sts	0x0067, r25	; 0x800067 <GP_IRQ_CallBack+0x1>
+ 25e:	80 93 66 00 	sts	0x0066, r24	; 0x800066 <GP_IRQ_CallBack>
+ 262:	df 91       	pop	r29
+ 264:	cf 91       	pop	r28
+ 266:	08 95       	ret
+
+00000268 <MCAL_TIMER0_SetCompareValue>:
+ 268:	8c bf       	out	0x3c, r24	; 60
+ 26a:	08 95       	ret
+
+0000026c <__vector_11>:
+
+/*******************************************************************************
+                                  IRQ Handlers
+*******************************************************************************/
+ISR(TIMER0_OVF_vect)
+{
+ 26c:	1f 92       	push	r1
+ 26e:	0f 92       	push	r0
+ 270:	0f b6       	in	r0, 0x3f	; 63
+ 272:	0f 92       	push	r0
+ 274:	11 24       	eor	r1, r1
+ 276:	2f 93       	push	r18
+ 278:	3f 93       	push	r19
+ 27a:	4f 93       	push	r20
+ 27c:	5f 93       	push	r21
+ 27e:	6f 93       	push	r22
+ 280:	7f 93       	push	r23
+ 282:	8f 93       	push	r24
+ 284:	9f 93       	push	r25
+ 286:	af 93       	push	r26
+ 288:	bf 93       	push	r27
+ 28a:	ef 93       	push	r30
+ 28c:	ff 93       	push	r31
+	GP_IRQ_CallBack();
+ 28e:	e0 91 66 00 	lds	r30, 0x0066	; 0x800066 <GP_IRQ_CallBack>
+ 292:	f0 91 67 00 	lds	r31, 0x0067	; 0x800067 <GP_IRQ_CallBack+0x1>
+ 296:	09 95       	icall
+}
+ 298:	ff 91       	pop	r31
+ 29a:	ef 91       	pop	r30
+ 29c:	bf 91       	pop	r27
+ 29e:	af 91       	pop	r26
+ 2a0:	9f 91       	pop	r25
+ 2a2:	8f 91       	pop	r24
+ 2a4:	7f 91       	pop	r23
+ 2a6:	6f 91       	pop	r22
+ 2a8:	5f 91       	pop	r21
+ 2aa:	4f 91       	pop	r20
+ 2ac:	3f 91       	pop	r19
+ 2ae:	2f 91       	pop	r18
+ 2b0:	0f 90       	pop	r0
+ 2b2:	0f be       	out	0x3f, r0	; 63
+ 2b4:	0f 90       	pop	r0
+ 2b6:	1f 90       	pop	r1
+ 2b8:	18 95       	reti
+
+000002ba <__vector_10>:
+
+ISR(TIMER0_COMP_vect)
+{
+ 2ba:	1f 92       	push	r1
+ 2bc:	0f 92       	push	r0
+ 2be:	0f b6       	in	r0, 0x3f	; 63
+ 2c0:	0f 92       	push	r0
+ 2c2:	11 24       	eor	r1, r1
+ 2c4:	2f 93       	push	r18
+ 2c6:	3f 93       	push	r19
+ 2c8:	4f 93       	push	r20
+ 2ca:	5f 93       	push	r21
+ 2cc:	6f 93       	push	r22
+ 2ce:	7f 93       	push	r23
+ 2d0:	8f 93       	push	r24
+ 2d2:	9f 93       	push	r25
+ 2d4:	af 93       	push	r26
+ 2d6:	bf 93       	push	r27
+ 2d8:	ef 93       	push	r30
+ 2da:	ff 93       	push	r31
+	GP_IRQ_CallBack();
+ 2dc:	e0 91 66 00 	lds	r30, 0x0066	; 0x800066 <GP_IRQ_CallBack>
+ 2e0:	f0 91 67 00 	lds	r31, 0x0067	; 0x800067 <GP_IRQ_CallBack+0x1>
+ 2e4:	09 95       	icall
+ 2e6:	ff 91       	pop	r31
+ 2e8:	ef 91       	pop	r30
+ 2ea:	bf 91       	pop	r27
+ 2ec:	af 91       	pop	r26
+ 2ee:	9f 91       	pop	r25
+ 2f0:	8f 91       	pop	r24
+ 2f2:	7f 91       	pop	r23
+ 2f4:	6f 91       	pop	r22
+ 2f6:	5f 91       	pop	r21
+ 2f8:	4f 91       	pop	r20
+ 2fa:	3f 91       	pop	r19
+ 2fc:	2f 91       	pop	r18
+ 2fe:	0f 90       	pop	r0
+ 300:	0f be       	out	0x3f, r0	; 63
+ 302:	0f 90       	pop	r0
+ 304:	1f 90       	pop	r1
+ 306:	18 95       	reti
+
+00000308 <_exit>:
+ 308:	f8 94       	cli
+
+0000030a <__stop_program>:
+ 30a:	ff cf       	rjmp	.-2      	; 0x30a <__stop_program>
