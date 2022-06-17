@@ -1,6 +1,6 @@
 # Embedded Systems Online Diploma
 
-[![image](https://drive.google.com/drive/u/0/folders/1U_LW0cvO0B-9uNSEpx4RQt9x-aTvaoWL)](https://www.learn-in-depth.com/online-diploma/sayedaya01@gmail.com)
+[![image](https://drive.google.com/file/d/162jDo3gFSJZRgdQDIL6zRRaT7d1JGDB3/view)](https://www.learn-in-depth.com/online-diploma/sayedaya01@gmail.com)
 
 ---
 
