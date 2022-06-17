@@ -1,6 +1,7 @@
 # Embedded Systems Online Diploma
 
-[![image](https://github.com/AyaaSayed/Master-Embedded-System-Online-Diploma/blob/master/Top%20one%202.jpg)](https://www.learn-in-depth.com/online-diploma/sayedaya01@gmail.com)
+[![image](https://drive.google.com/uc?export=view&id=1Bcpl5OGMCVsqHlF52MFKXuOHNEaKHi92)](https://www.learn-in-depth.com/)
+
 
 ---
 
@@ -31,5 +32,6 @@
 ## Overall progress ![image](https://progress-bar.dev/1/?scale=3&title=Terms&suffix=&width=230&color=aa00ff)
 
 ---
+[![image](https://github.com/AyaaSayed/Master-Embedded-System-Online-Diploma/blob/master/Top%20one%202.jpg)](https://www.learn-in-depth.com/online-diploma/sayedaya01@gmail.com)
 
 ## My Progress Profile: [Click Here](https://www.learn-in-depth.com/online-diploma/sayedaya01@gmail.com)
